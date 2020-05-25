@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="Test_FB_Counter_Increments" Id="{ed7d4b18-0e41-4ad1-835d-cb8be51dbc2d}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK Test_FB_Counter_Increments EXTENDS TUnitTestBase
+VAR
+    Counter : CTU;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// Setup..
+Counter(
+	CU:= FALSE, 
+	RESET:= TRUE, 
+	PV:= , 
+	Q=> , 
+	CV=> );
+
+// Test... 
+Counter(
+	CU:= TRUE, 
+	RESET:= FALSE, 
+	PV:= , 
+	Q=> , 
+	CV=> );
+// Verify...   
+Assertion.AssertEquals_WORD(
+    Expected:= 1, 
+    Actual:= Counter.CV, 
+    ObjectName:= _TestName, 
+    VariableName:= 'Counter.CV');   
+
+// Done...   
+TestFinished();]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
