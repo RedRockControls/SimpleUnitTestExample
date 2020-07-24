@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.4">
   <POU Name="Test_FB_Counter_SetsQ_Output" Id="{c08e92b5-5880-4083-ba7d-60b1332265cf}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK Test_FB_Counter_SetsQ_Output EXTENDS TUnitTestBase
 VAR
@@ -26,7 +26,6 @@ Counter(
 Assertion.AssertEquals_BOOL(
     Expected:= TRUE, 
     Actual:= Counter.Q, 
-    ObjectName:= _TestName, 
     VariableName:= 'Counter.Q');   
 
 // Done...   

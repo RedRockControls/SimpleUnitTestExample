@@ -16,11 +16,11 @@
     <Implicit_Jitter_Distribution>{f80e15a4-2312-4e30-837d-b56665190492}</Implicit_Jitter_Distribution>
     <LibraryReferences>{0815c35e-5479-4cd1-a6b9-a2231d91cef2}</LibraryReferences>
     <Company>Red Rock Controls Limited</Company>
-    <Released>false</Released>
+    <Released>true</Released>
     <Title>SimpleUnitTestExampleProject</Title>
-    <ProjectVersion>1.0.0.0</ProjectVersion>
+    <ProjectVersion>1.0.1.0</ProjectVersion>
     <Author>Roger Christopher</Author>
-    <Description>Initial release</Description>
+    <Description>Updated to </Description>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="GlobalTextList.TcGTLO">
@@ -124,6 +124,11 @@
     <None Include="PLC.tmc">
       <SubType>Content</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PlaceholderResolution Include="tcl_SimpleUnitTestLibrary">
+      <Resolution>tcl_SimpleUnitTestLibrary, 1.0.2.0 (Red Rock Controls Limited)</Resolution>
+    </PlaceholderResolution>
   </ItemGroup>
   <ProjectExtensions>
     <PlcProjectOptions>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.4">
   <POU Name="PB_TestRunner" Id="{dcbb09a5-34e3-4ed4-a19d-092013df7780}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PB_TestRunner
 VAR
@@ -9,7 +9,9 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[tcl_SimpleUnitTestLibrary.TestFramework.TestRunner(RunTestsSequentially := FALSE); // Runs all the tests concurrently]]></ST>
+      <ST><![CDATA[tcl_SimpleUnitTestLibrary.TestFramework.TestRunner(
+    RunTestsSequentially := TRUE,  // Runs all the tests sequentially
+    ManualTestRunsOnly := FALSE);  // Runs all the tests on start]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
