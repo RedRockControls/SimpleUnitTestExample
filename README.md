@@ -4,7 +4,7 @@
 
 This project was created with TwinCAT 3.1.4024.7
 
-The easiest way to install the libraries is to right-click on the PLC object in the project tree and select "Install Project Libraries (Unknown ersions)"
+The easiest way to install the libraries is to right-click on the PLC object in the project tree and select "Install Project Libraries (Unknown versions)"
 
 This should install
 * tcl_SimpleUnitTestLibrary version 1.0.0.0
