@@ -16,11 +16,12 @@
     <Implicit_Jitter_Distribution>{f80e15a4-2312-4e30-837d-b56665190492}</Implicit_Jitter_Distribution>
     <LibraryReferences>{0815c35e-5479-4cd1-a6b9-a2231d91cef2}</LibraryReferences>
     <Company>Red Rock Controls Limited</Company>
-    <Released>true</Released>
+    <Released>false</Released>
     <Title>SimpleUnitTestExampleProject</Title>
-    <ProjectVersion>1.0.1.0</ProjectVersion>
+    <ProjectVersion>1.0.2.0</ProjectVersion>
     <Author>Roger Christopher</Author>
-    <Description>Updated to </Description>
+    <Description>Updated to use tcl_SimpleUnitTestLibrary V1.0.4.0
+Execution of tests defined in tcl_BaseClasses added</Description>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="GlobalTextList.TcGTLO">
@@ -115,6 +116,10 @@
       <DefaultResolution>Tc3_Module, * (Beckhoff Automation GmbH)</DefaultResolution>
       <Namespace>Tc3_Module</Namespace>
     </PlaceholderReference>
+    <PlaceholderReference Include="tcl_BaseClasses">
+      <DefaultResolution>tcl_BaseClasses, * (Red Rock Controls Limited)</DefaultResolution>
+      <Namespace>tcl_BaseClasses</Namespace>
+    </PlaceholderReference>
     <PlaceholderReference Include="tcl_SimpleUnitTestLibrary">
       <DefaultResolution>tcl_SimpleUnitTestLibrary, * (Red Rock Controls Limited)</DefaultResolution>
       <Namespace>tcl_SimpleUnitTestLibrary</Namespace>
@@ -127,7 +132,7 @@
   </ItemGroup>
   <ItemGroup>
     <PlaceholderResolution Include="tcl_SimpleUnitTestLibrary">
-      <Resolution>tcl_SimpleUnitTestLibrary, 1.0.2.0 (Red Rock Controls Limited)</Resolution>
+      <Resolution>tcl_SimpleUnitTestLibrary, 1.0.4.0 (Red Rock Controls Limited)</Resolution>
     </PlaceholderResolution>
   </ItemGroup>
   <ProjectExtensions>
