@@ -13,13 +13,12 @@ END_VAR
     <Implementation>
       <ST><![CDATA[IF Init THEN
     TestFramework.TestRunner.AddTestSuite(FB_Counter_Tests); // Run tests defined in this project
-    TestFramework.TestRunner.AddTestSuite(tcl_BaseClasses.UnitTests.ExecutionTests); // Run tests defined in a library that test the functions in that library
     Init := FALSE;
 END_IF
 
 tcl_SimpleUnitTestLibrary.TestFramework.TestRunner(
     RunTestsSequentially := TRUE,   // If TRUE, all the tests are run sequentially
-    ManualTestRunsOnly   := FALSE); // If TRUE, tests are only run when on demand vua visualisation
+    ManualTestRunsOnly   := TRUE); // If TRUE, tests are only run when on demand vua visualisation
     
     
     ]]></ST>
