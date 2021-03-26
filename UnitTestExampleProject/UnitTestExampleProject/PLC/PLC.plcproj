@@ -133,10 +133,10 @@ tcl_BaseClasses V 1.0.14.0</Description>
   </ItemGroup>
   <ItemGroup>
     <PlaceholderResolution Include="tcl_BaseClasses">
-      <Resolution>tcl_BaseClasses, 1.0.14.0 (Red Rock Controls Limited)</Resolution>
+      <Resolution>tcl_BaseClasses, * (Red Rock Controls Limited)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="tcl_SimpleUnitTestLibrary">
-      <Resolution>tcl_SimpleUnitTestLibrary, 1.0.6.0 (Red Rock Controls Limited)</Resolution>
+      <Resolution>tcl_SimpleUnitTestLibrary, * (Red Rock Controls Limited)</Resolution>
     </PlaceholderResolution>
   </ItemGroup>
   <ProjectExtensions>

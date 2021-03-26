@@ -1,24 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.4">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
   <POU Name="PB_TestRunner" Id="{dcbb09a5-34e3-4ed4-a19d-092013df7780}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PB_TestRunner
 VAR
-    Init : BOOL := TRUE;
+    TestRunner : T_TestRunner;
+    
     // Test Suite holds a list of tests that are automatically added to list of tests held by the test framework...
-    FB_Counter_Tests : TTestSuite;
+    FB_Counter_Tests : T_TestSuite;
     Test_FB_Counter_Increments   : Test_FB_Counter_Increments  (TestSuite := FB_Counter_Tests); 
     Test_FB_Counter_SetsQ_Output : Test_FB_Counter_SetsQ_Output(TestSuite := FB_Counter_Tests);
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF Init THEN
-    TestFramework.TestRunner.AddTestSuite(FB_Counter_Tests); // Run tests defined in this project
-    Init := FALSE;
+      <ST><![CDATA[IF TestRunner.ReloadTests THEN
+    TestRunner.AddTestSuite(FB_Counter_Tests); // Run tests defined in this project
+    TestRunner.ReloadTests := FALSE;
 END_IF
 
-tcl_SimpleUnitTestLibrary.TestFramework.TestRunner(
-    RunTestsSequentially := TRUE,   // If TRUE, all the tests are run sequentially
-    ManualTestRunsOnly   := TRUE); // If TRUE, tests are only run when on demand vua visualisation
+TestRunner(); 
     
     
     ]]></ST>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.4">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
   <POU Name="Test_FB_Counter_Increments" Id="{ed7d4b18-0e41-4ad1-835d-cb8be51dbc2d}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK Test_FB_Counter_Increments EXTENDS TUnitTestBase
+    <Declaration><![CDATA[FUNCTION_BLOCK Test_FB_Counter_Increments EXTENDS T_UnitTestBase
 VAR
     Counter : CTU;
 END_VAR
