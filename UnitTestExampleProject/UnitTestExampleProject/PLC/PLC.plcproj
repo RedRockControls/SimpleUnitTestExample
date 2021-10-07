@@ -18,11 +18,11 @@
     <Company>Red Rock Controls Limited</Company>
     <Released>false</Released>
     <Title>SimpleUnitTestExampleProject</Title>
-    <ProjectVersion>1.0.3.0</ProjectVersion>
+    <ProjectVersion>1.0.4.0</ProjectVersion>
     <Author>Roger Christopher</Author>
     <Description>Updated to use
-tcl_SimpleUnitTestLibrary V1.0.6.0
-tcl_BaseClasses V 1.0.14.0</Description>
+tcl_SimpleUnitTestLibrary V1.0.10.0
+tcl_BaseClasses V 1.0.15.0</Description>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="GlobalTextList.TcGTLO">
